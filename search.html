@@ -175,7 +175,7 @@ $(document).ready(function() {
         <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
         <script src="js/index.js"></script>
 
-		<script src="js/jquery.treeview.js"></script>
+		
         <script>$('#movable_links').draggable();$('#movable_link_1').draggable();$('#movable_link_2').draggable();$('#movable_link_3').draggable();</script>
        
        	<script type="text/javascript" src="js/json_caller.js"></script>
@@ -196,7 +196,7 @@ $(document).ready(function() {
 
    		// Displays the tools in a table
        $.each(data.tool, function(i, f) {
-		 var tool_div_row = "<ul class='col-md-2'>" + "<li >" + "<img src='images/tools-icon.jpg' class='img-responsive center-block'>" + "</img>" + "<h2>" + f.name + "</h2>" + "<h3>" + f.version + "</h3>"  +  "<p>" + f.summary + "</p>"  + "</li>" + "</ul>" 
+		 var tool_div_row = "<ul class='col-md-6'>" + "<li style='list-style-type: none;' >" + "<img src='images/tools-icon.jpg' class='img-responsive center-block'>" + "</img>" + "<h2>" + f.name + "</h2>" + "<h3>" + f.version + "</h3>"  +  "<p>" + f.summary + "</p>"  + "</li>" + "</ul>" 
         $(tool_div_row).appendTo("#two-columns");
 // once i = 11, <div class='clearfix'></div>
 
