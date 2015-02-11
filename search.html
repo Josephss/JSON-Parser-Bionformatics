@@ -196,7 +196,7 @@ $(document).ready(function() {
 
    		// Displays the tools in a table
        $.each(data.tool, function(i, f) {
-		 var tool_div_row = "<ul class='col-md-6'>" + "<li style='list-style-type: none;' >" + "<img src='images/tools-icon.jpg' class='img-responsive center-block'>" + "</img>" + "<h2>" + f.name + "</h2>" + "<h3>" + f.version + "</h3>"  +  "<p>" + f.summary + "</p>"  + "</li>" + "</ul>" 
+		 var tool_div_row = "<div class='grid-container' style='display:block;'>" + "<ul class='col-md-6'>" + "<li style='list-style-type: none;' >" + "<img src='images/tools-icon.jpg' class='img-responsive center-block'>" + "</img>" + "<h2>" + f.name + "</h2>" + "<h3>" + f.version + "</h3>"  +  "<p>" + f.summary + "</p>"  + "</li>" + "</ul>" + "</div>"
         $(tool_div_row).appendTo("#two-columns");
 // once i = 11, <div class='clearfix'></div>
 
