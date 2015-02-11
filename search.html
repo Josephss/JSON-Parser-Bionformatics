@@ -45,8 +45,9 @@ ul.LinkedList { display: block; }
 			<ul class="rig columns-3" style="cursor: pointer;">       
 				<li id="creation">
 					<img src="images/tools-icon.jpg" />
-					<h3 id ="name0" style="display:inline;">GRN Infer</h3>
-					<p id ="description0" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+			<!--		<h3 id ="name0" style="display:inline;"></h3>
+					<p id ="description0" ></p> -->
 					<a href="http://brin.usd.edu/Bioinformatics_Portal/BLP/workBench/displayLearnFlow.xhtml?learnFlowId=48">
 					 <img src="img/support.png" align="right" onmouseover="this.border='1'" onmouseout="this.border='0'"/>
 					</a> 
@@ -82,7 +83,7 @@ ul.LinkedList { display: block; }
 				<ul class="rig columns-3" style="cursor: pointer;">       
 				<li>
 					
-					<h3 id ="name1" style="display:inline;">GRN Infer</h3>
+					<h3 id ="name1" style="display:inline;"></h3>
 					<a href="http://brin.usd.edu/Bioinformatics_Portal/BLP/workBench/displayLearnFlow.xhtml?learnFlowId=48">
 					 <img src="img/support.png" align="right" onmouseover="this.border='1'" onmouseout="this.border='0'"/>
 					</a> 
@@ -180,25 +181,86 @@ $(document).ready(function() {
 <!-- START JSON Parser -->
 <script>
 
+// Test self-executing function ...
 
- $(function() {
+(function(){
+  console.log('Hello World!');
+
+})();
+
+
+// Why is the getJSON function not working ...
+// AJAX funciton ... confirm  that 
+ (function() {
+ 
+
+ 		    for (var i = 0; i >= 0; i++) {
+ 		    	console.log('Hello World! -- Second Function');
+
+		    	// create the h3 element
+				var el_h3 = document.createElement('h3')
+				el_h3.id = 'name' + i
+				  
+				// create the p element
+				var el_p = document.createElement('p')
+				el_p.id = 'description' + i
+
+
+		    	el_h3.insertAdjacentHTML('afterbegin', "data.tool[i].name")
+		    	el_p.insertAdjacentHTML('afterbegin', "data.tool[i].summary")
+		    	//$("").appendTo(".container")
+		    	// DO some type of append ... JQUERY ...
+		    	// Append child ... what do I want to append to ...
+		    	// Append to List "Creation" ...
+
+		    	//$( "h3#name" + i).appendTo( $( "#creation" ) );
+		    	$( "p#description" + i).appendTo( $( "#creation" ) );
+		    	$( "#creation" ).appendTo( $( "h3" ) );
+
+		    	$( "#creation" + i).append( "<p>Test</p>" );
+		    	console.log('hello I am the function running');
+		    	// Append javaSript ....
+
+		   };
 
    $.getJSON('tools_structured.json', function(data) {
-		$.each(data.tool, function() { 
+	//	$.each(data.tool, function() { 
 		    console.log($(this)[0])
 		    // For each tools, display ....
+		    // Use insetAdjacentHTML instead of innerHTML ...
+		    // Fix the JSON reading 
 		    for (var i = 0; i >= 0; i++) {
-		    	document.getElementById("name" + i).innerHTML = data.tool[i].name
-		    	document.getElementById("description" + i).innerHTML = data.tool[i].summary
 
-		    	$("<div></div>").appendTo("container");
-		    	
+		    	// create the h3 element
+				var el_h3 = document.createElement('h3')
+				el_h3.id = 'name' + i
+				  
+				// create the p element
+				var el_p = document.createElement('p')
+				el_p.id = 'description' + i
+
+
+		    	el_h3.insertAdjacentHTML('afterbegin', "data.tool[i].name")
+		    	el_p.insertAdjacentHTML('afterbegin', "data.tool[i].summary")
+		    	//$("").appendTo(".container")
+		    	// DO some type of append ... JQUERY ...
+		    	// Append child ... what do I want to append to ...
+		    	// Append to List "Creation" ...
+
+		    	//$( "h3#name" + i).appendTo( $( "#creation" ) );
+		    //	$( "p#description" + i).appendTo( $( "#creation" ) );
+		    	//$( "#creation" ).appendTo( $( "h3" ) );
+
+		    	$( "#creation" + i).append( "<p>Test</p>" );
+		    	console.log('hello I am the function running');
+		    	// Append javaSript ....
+
 		   };
 		       
-		})
+	//	})
 
    });
-});
+})();
 
 </script>
 <!-- END JSON Parser -->

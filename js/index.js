@@ -9,7 +9,7 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
+        //document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
     //
@@ -74,14 +74,14 @@ $("a").hover(function(e) {
       //  oList.getElementsByTagName("ul")[i].style.display="none";            
      // }                                                                  
       // Add the click-event handler to the list items
-      if (oList.addEventListener) {
-        oList.addEventListener("click", toggleBranch, false);
-      } else if (oList.attachEvent) { // For IE
-        oList.attachEvent("onclick", toggleBranch);
+     // if (oList.addEventListener) {
+        //oList.addEventListener("click", toggleBranch, false);
+    //  } else if (oList.attachEvent) { // For IE
+     //   oList.attachEvent("onclick", toggleBranch);
       }
       // Make the nested items look like links
-      addLinksToBranches(oList);
-    }
+   //  addLinksToBranches(oList);
+    //}
 
     // This is the click-event handler
     function toggleBranch(event) {
