@@ -2,6 +2,9 @@
 <html>
 <head>
 <title>Bioinformatics Tools Library</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <link href='index_grid.css' rel='stylesheet' type='text/css'>
 
@@ -40,14 +43,17 @@ ul.LinkedList { display: block; }
 
 		<hr />
 
+
+
 		<!--#two-columns-->
 		<div id="two-columns" class="grid-container" style="display:block;">
+			<!--
 			<ul class="rig columns-3" style="cursor: pointer;">       
 				<li id="creation">
 					<img src="images/tools-icon.jpg" />
 
-			<!--		<h3 id ="name0" style="display:inline;"></h3>
-					<p id ="description0" ></p> -->
+			<h3 id ="name0" style="display:inline;"></h3>
+					<p id ="description0" ></p> 
 					<a href="http://brin.usd.edu/Bioinformatics_Portal/BLP/workBench/displayLearnFlow.xhtml?learnFlowId=48">
 					 <img src="img/support.png" align="right" onmouseover="this.border='1'" onmouseout="this.border='0'"/>
 					</a> 
@@ -62,7 +68,7 @@ ul.LinkedList { display: block; }
 					 <img src="img/play.png" align="right" onmouseover="this.border='1'" onmouseout="this.border='0'"/>
 					</a> 
 					 
-					 <!--test Icons -->
+					
 
 					 <a href="https://jacksons.usd.edu/Pheno2GRN/">
 					 <img src="img/play.png" align="right" onmouseover="this.border='1'" onmouseout="this.border='0'"/>
@@ -71,11 +77,11 @@ ul.LinkedList { display: block; }
 					<a href="https://jacksons.usd.edu/Pheno2GRN/">
 					 <img src="img/play.png" align="right" onmouseover="this.border='1'" onmouseout="this.border='0'"/>
 					</a>
-
-					
-					<!END --test Icons -->
-				</li>
+					</li>
 			</ul>
+					
+			-->
+			
 		</div>
 		<!--/#two-columns-->
 		
@@ -165,7 +171,7 @@ $(document).ready(function() {
 });
 </script>
 <!--Touch_event-->
-        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script src="http://code.jquery.com/jquery-2.1.3.js"></script>
         <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
         <script src="js/index.js"></script>
 
@@ -174,93 +180,34 @@ $(document).ready(function() {
        
        	<script type="text/javascript" src="js/json_caller.js"></script>
 <!--End Touch_event-->
-
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 
 
 <!-- START JSON Parser -->
 <script>
 
-// Test self-executing function ...
 
-(function(){
-  console.log('Hello World!');
-
-})();
-
-
-// Why is the getJSON function not working ...
-// AJAX funciton ... confirm  that 
- (function() {
- 
-
- 		    for (var i = 0; i >= 0; i++) {
- 		    	console.log('Hello World! -- Second Function');
-
-		    	// create the h3 element
-				var el_h3 = document.createElement('h3')
-				el_h3.id = 'name' + i
-				  
-				// create the p element
-				var el_p = document.createElement('p')
-				el_p.id = 'description' + i
-
-
-		    	el_h3.insertAdjacentHTML('afterbegin', "data.tool[i].name")
-		    	el_p.insertAdjacentHTML('afterbegin', "data.tool[i].summary")
-		    	//$("").appendTo(".container")
-		    	// DO some type of append ... JQUERY ...
-		    	// Append child ... what do I want to append to ...
-		    	// Append to List "Creation" ...
-
-		    	//$( "h3#name" + i).appendTo( $( "#creation" ) );
-		    	$( "p#description" + i).appendTo( $( "#creation" ) );
-		    	$( "#creation" ).appendTo( $( "h3" ) );
-
-		    	$( "#creation" + i).append( "<p>Test</p>" );
-		    	console.log('hello I am the function running');
-		    	// Append javaSript ....
-
-		   };
+ $(function() {
 
    $.getJSON('tools_structured.json', function(data) {
-	//	$.each(data.tool, function() { 
-		    console.log($(this)[0])
-		    // For each tools, display ....
-		    // Use insetAdjacentHTML instead of innerHTML ...
-		    // Fix the JSON reading 
-		    for (var i = 0; i >= 0; i++) {
-
-		    	// create the h3 element
-				var el_h3 = document.createElement('h3')
-				el_h3.id = 'name' + i
-				  
-				// create the p element
-				var el_p = document.createElement('p')
-				el_p.id = 'description' + i
 
 
-		    	el_h3.insertAdjacentHTML('afterbegin', "data.tool[i].name")
-		    	el_p.insertAdjacentHTML('afterbegin', "data.tool[i].summary")
-		    	//$("").appendTo(".container")
-		    	// DO some type of append ... JQUERY ...
-		    	// Append child ... what do I want to append to ...
-		    	// Append to List "Creation" ...
+   		// Displays the tools in a table
+       $.each(data.tool, function(i, f) {
+		 var tool_div_row = "<ul class='col-md-2'>" + "<li >" + "<img src='images/tools-icon.jpg' class='img-responsive center-block'>" + "</img>" + "<h2>" + f.name + "</h2>" + "<h3>" + f.version + "</h3>"  +  "<p>" + f.summary + "</p>"  + "</li>" + "</ul>" 
+        $(tool_div_row).appendTo("#two-columns");
+// once i = 11, <div class='clearfix'></div>
 
-		    	//$( "h3#name" + i).appendTo( $( "#creation" ) );
-		    //	$( "p#description" + i).appendTo( $( "#creation" ) );
-		    	//$( "#creation" ).appendTo( $( "h3" ) );
 
-		    	$( "#creation" + i).append( "<p>Test</p>" );
-		    	console.log('hello I am the function running');
-		    	// Append javaSript ....
+     });
 
-		   };
-		       
-	//	})
+		
 
    });
-})();
+});
+
 
 </script>
 <!-- END JSON Parser -->
