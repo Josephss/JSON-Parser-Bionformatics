@@ -47,41 +47,7 @@ ul.LinkedList { display: block; }
 
 		<!--#two-columns-->
 		<div id="two-columns" class="grid-container" style="display:block;">
-			<!--
-			<ul class="rig columns-3" style="cursor: pointer;">       
-				<li id="creation">
-					<img src="images/tools-icon.jpg" />
-
-			<h3 id ="name0" style="display:inline;"></h3>
-					<p id ="description0" ></p> 
-					<a href="http://brin.usd.edu/Bioinformatics_Portal/BLP/workBench/displayLearnFlow.xhtml?learnFlowId=48">
-					 <img src="img/support.png" align="right" onmouseover="this.border='1'" onmouseout="this.border='0'"/>
-					</a> 
-					 <a href="https://jacksons.usd.edu/Pheno2GRN/">
-					 <img src="img/quality.png" align="right" onmouseover="this.border='1'" onmouseout="this.border='0'"/> 
-					</a>
-					<a href="https://jacksons.usd.edu/Pheno2GRN/">
-					 <img src="img/eye.png" align="right" onmouseover="this.border='1'" onmouseout="this.border='0'"/>
-					</a> 
-
-					 <a href="https://jacksons.usd.edu/Pheno2GRN/">
-					 <img src="img/play.png" align="right" onmouseover="this.border='1'" onmouseout="this.border='0'"/>
-					</a> 
-					 
-					
-
-					 <a href="https://jacksons.usd.edu/Pheno2GRN/">
-					 <img src="img/play.png" align="right" onmouseover="this.border='1'" onmouseout="this.border='0'"/>
-					</a>
-
-					<a href="https://jacksons.usd.edu/Pheno2GRN/">
-					 <img src="img/play.png" align="right" onmouseover="this.border='1'" onmouseout="this.border='0'"/>
-					</a>
-					</li>
-			</ul>
-					
-			-->
-			
+						
 		</div>
 		<!--/#two-columns-->
 		
@@ -137,6 +103,22 @@ ul.LinkedList { display: block; }
 					 
 				</li>
 				
+				<li>
+					
+					
+					 <img src="img/support.png" align="right" onmouseover="this.border='1'" onmouseout="this.border='0'"/>
+					</a> 
+					 <a href="https://jacksons.usd.edu/Pheno2GRN/">
+					 <img src="img/quality.png" align="right" onmouseover="this.border='1'" onmouseout="this.border='0'"/> 
+					</a>
+					<a href="https://jacksons.usd.edu/Pheno2GRN/">
+					 <img src="img/eye.png" align="right" onmouseover="this.border='1'" onmouseout="this.border='0'"/>
+					</a> 
+					 <a href="https://jacksons.usd.edu/Pheno2GRN/">
+					 <img src="img/play.png" align="right" onmouseover="this.border='1'" onmouseout="this.border='0'"/>
+					</a> 
+					 
+				</li>
 			</ul>		  
 		</div>
 		<!--/#four-columns-->
@@ -196,7 +178,7 @@ $(document).ready(function() {
 
    		// Displays the tools in a table
        $.each(data.tool, function(i, f) {
-		 var tool_div_row = "<div class='grid-container' style='display:block;'>" + "<ul class='col-md-6'>" + "<li style='list-style-type: none;' >" + "<img src='images/tools-icon.jpg' class='img-responsive center-block'>" + "</img>" + "<h2>" + f.name + "</h2>" + "<h3>" + f.version + "</h3>"  +  "<p>" + f.summary + "</p>"  + "</li>" + "</ul>" + "</div>"
+		 var tool_div_row = "<div id='two-columns' class='grid-container centered' style='display:block;'>" + "<ul class='col-md-4'>" + "<li style='list-style-type: none;' >" + "<img src='images/tools-icon.jpg' class='img-responsive center-block'>" + "</img>" + "<h2>" + f.name + "</h2>" + "<h3>" + f.version + "</h3>"  +  "<p>" + f.summary + "</p>"  + "</li>" + "</ul>" + "</div>"
         $(tool_div_row).appendTo("#two-columns");
 // once i = 11, <div class='clearfix'></div>
 
