@@ -15,6 +15,37 @@ ul.LinkedList { display: block; }
 .HandCursorStyle { cursor: pointer; cursor: hand; }  /* For IE */
   </style>
 <!-- End tree view css-->
+
+<!-- START JSON Parser -->
+<script>
+
+
+ $(function() {
+
+   $.getJSON('tools_structured.json', function(data) {
+
+
+   		// Displays the tools in a table
+       $.each(data.tool, function(i, f) {
+		 var tblRow = "<tr>" + "<td>" + f.name + "</td>" +
+           "<td>" + f.display_name + "</td>" + "<td>" + f.version + "</td>" + "<td>" + f.summary + "</td>" + "<td>" + f.description + "</td>" + "<td>" + f.example + "</td>" +"<td>" + f.links + "</td>" +"<td>" + f.references + "</td>" +"<td>" + f.availability + "</td>" +"<td>" + f.technology + "</td>" +"<td>" + f.programming_language + "</td>" +"<td>" + f.license + "</td>" +"<td>" + f.operating_system + "</td>" +"<td>" + f.inputs + "</td>" +"</tr>" 
+        $(tblRow).appendTo("#userdata tbody");
+
+
+     });
+
+		$.each(data.tool, function() { 
+		    console.log($(this)[0])
+		    // Create a for loop
+		 document.getElementById("tester").innerHTML = data.tool[0].name
+		})
+
+   });
+});
+
+</script>
+<!-- END JSON Parser -->
+
 </head>
 
 <!--Added the onload for the tree view-->
@@ -22,8 +53,6 @@ ul.LinkedList { display: block; }
 
 <div class="wrapper">
 	<div class="container">
-		<h1>Tools Set</h1>
-
 		<ul class="home-nav">
 			<li><a href="index.html" data-id="three-columns"><img src="img/home-icon.png"></a></li>
 			<li><a href="help.html" data-id="four-columns"><img src="img/tiny-question.png"></a></li>
@@ -42,39 +71,33 @@ ul.LinkedList { display: block; }
 		<hr />
 		
 		<div id="two-columns" class="grid-container" style="display:block;">
-			<ul class="rig columns-3">
-				<li>
-					<img src="images/pri_001.jpg" />
-					<h3>Image Title</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</li>
-				<li>
-					<img src="images/pri_002.jpg" />
-					<h3>Image Title</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</li>
-				<li>
-					<img src="images/pri_003.jpg" />
-					<h3>Image Title</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</li>
-				<li>
-					<img src="images/pri_004.jpg" />
-					<h3>Image Title</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</li>
-				<li>
-					<img src="images/pri_005.jpg" />
-					<h3>Image Title</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</li>
-				<li>
-					<img src="images/pri_006.jpg" />
-					<h3>Image Title</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</li>
-				
-			</ul>
+			<div class="wrapper">
+<div class="profile">
+<table id= "userdata" border="2">
+  <thead>
+            <th>Name</th>
+            <th>Display Name</th>
+            <th>Version</th>
+            <th>Summary</th>
+           <th>description</th>
+           <th>example</th>
+           <th>links</th>
+           <th>references</th>
+           <th>availability</th>
+           <th>technology</th>
+           <th>programming_language</th>
+           <th>license</th>
+           <th>operating_system</th>
+           <th>inputs</th>
+        </thead>
+      <tbody>
+
+       </tbody>
+   </table>
+
+
+</div>
+</div>
 		</div>
 		<!--/#two-columns-->
 		
