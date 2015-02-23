@@ -5,13 +5,12 @@
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <link href='index_grid.css' rel='stylesheet' type='text/css'>
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
 
 <link href="css/sample.css" rel='stylesheet' type='text/css'>
 
-
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -24,23 +23,25 @@
 		
 		<div id="two-columns" class="grid-container centered" style="display:inline;">
 			<ul class="rig columns-1">
-				<li id="movable_links" data-tooltip="#tfheader">
+				<li id="movable_links" data-tooltip="#tfheader ">
+		
 		<!--SearchBox-->
-					<div id="tfheader">
+		<div id="tfheader">
 		<form id="tfnewsearch" method="get" action="http://www.google.com">
 		        <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
 		</form>
-		<div class="tfclear"></div>
+		
 		</div>
 		<!--End SearchBox-->
-					 <img  class="search"onclick="window.open('search.html', '_self');" onmouseover="this.border='1'" onmouseout="this.border='0'" src="img/search.png" width ="170" height="200" alt="" align="middle" style="cursor:Pointer;" title="Search" />
 
-					 <img  onclick="window.open('Grid.html', '_self');" onmouseover="this.border='1'" onmouseout="this.border='0'" src="img/list_ingredients.png" width ="170" height="200" alt="" align="middle" style="cursor:Pointer;" title="Find tools using an assistant"/>
+					 <img  class="search img-responsive" onclick="window.open('search.html', '_self');" onmouseover="this.border='1'" onmouseout="this.border='0'" src="img/search.png" width ="170" height="200" alt="" align="middle" style="cursor:Pointer;" title="Search" />
+
+					 <img  class="search img-responsive" onclick="window.open('Grid.html', '_self');" onmouseover="this.border='1'" onmouseout="this.border='0'" src="img/list_ingredients.png" width ="170" height="200" alt="" align="middle" style="cursor:Pointer;" title="Find tools using an assistant"/>
 		
-					<img onclick="window.open('tools_list.html', '_self');" onmouseover="this.border='1'" onmouseout="this.border='0'" src="img/customer_support-512.png" width ="170" height="200" alt="" align="middle" style="cursor:Pointer;" title="Tools list"/>
+					<img class="search img-responsive" onclick="window.open('assistant.html', '_self');" onmouseover="this.border='1'" onmouseout="this.border='0'" src="img/customer_support-512.png" width ="170" height="200" alt="" align="middle" style="cursor:Pointer;" title="Tools list"/>
 
-					<img  onclick="window.open('workflow.html', '_self');" onclick="" onmouseover="this.border='1'" onmouseout="this.border='0'" src="img/workflow.png" width ="170" height="200" alt="" style="cursor:Pointer;" title="Workflow"/>
-                               </li>
+					<img  class="search img-responsive" onclick="window.open('workflow.html', '_self');" onclick="" onmouseover="this.border='1'" onmouseout="this.border='0'" src="img/workflow.png" width ="170" height="210" alt="" style="cursor:Pointer;" title="Workflow"/>
+                   </li>
 			</ul>
 		</div>
 		<!--/#two-columns-->
