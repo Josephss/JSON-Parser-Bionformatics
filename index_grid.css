@@ -58,9 +58,14 @@ a:hover img {
 .lefter{
 	position: relative;
 	text-align: center;
+
 	width: 50%;
 }
-
+.careless{
+	position: relative;
+	text-align: right;
+	margin: 0 10px 50px 10px;
+}
 h1 {
 	font-family: 'Oswald', sans-serif;
 	font-size: 4em;
