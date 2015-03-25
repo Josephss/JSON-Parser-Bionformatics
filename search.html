@@ -41,12 +41,14 @@
 
 		<!--#two-columns-->
 		<div id="two-columns" class="grid-container" style="display:block;">
-			<ul class="rig columns-1 centered">
+			<ul class="rig columns-2 centered">
 				
 				<li>
 					
 					<h3>Search Tools</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					
+					 <gcse:search></gcse:search>
+					 <p>Start typing the name of the tool that you are looking for on the above search box.</p>
 				</li>
 				
 			</ul>
@@ -54,12 +56,7 @@
 		<!--/#two-columns-->
 		
 		<div id="three-columns" class="grid-container">
-				<ul class="rig columns-3">
-				<li>
-					
-					<h3>Search Tools</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</li>
+				
 				
 				
 			</ul>  
@@ -107,6 +104,18 @@ $(document).ready(function() {
 		<!--End Touch_event-->
 		<!-- Latest compiled and minified bootsrap JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<script>
+		  (function() {
+		    var cx = '007061568807442488368:ubrodjriaau';
+		    var gcse = document.createElement('script');
+		    gcse.type = 'text/javascript';
+		    gcse.async = true;
+		    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+		        '//www.google.com/cse/cse.js?cx=' + cx;
+		    var s = document.getElementsByTagName('script')[0];
+		    s.parentNode.insertBefore(gcse, s);
+		  })();
+		</script>
 
 
 </body>

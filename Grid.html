@@ -9,6 +9,18 @@
 <link href='index_grid.css' rel='stylesheet' type='text/css'>
 
 <link href="css/jquery.treeview.css" rel='stylesheet' type='text/css'>
+<script>
+  (function() {
+    var cx = '007061568807442488368:ubrodjriaau';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
 
 </head>
 
@@ -23,8 +35,10 @@
 		<ul class="home-nav">
 			<li><a href="index.html" data-id="three-columns"><img src="img/home-icon.png"></a></li>
 			<li><a href="help.html" data-id="four-columns"><img src="img/tiny-question.png"></a></li>
+		</ul>	
+		<ul class="home-nav">
+			<gcse:search></gcse:search>
 		</ul>
-
 <!--
 		<ul class="grid-nav">
 			<li><a href="#" data-id="two-columns" class="active">Grid</a></li>

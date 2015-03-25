@@ -49,6 +49,9 @@ a:hover img {
 .ver{
 	border-right: thin solid #B8B8B8;
 }
+.righter{
+	text-align: right;
+}
 .discriptionPad{
 	line-height: 20px;
 	width: 100%;

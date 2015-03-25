@@ -11,6 +11,19 @@
 <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script>
+  (function() {
+    var cx = '007061568807442488368:ubrodjriaau';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
 </head>
 
 <body>
@@ -28,7 +41,9 @@
 		<!--SearchBox-->
 		<div id="tfheader">
 		<form id="tfnewsearch" method="get" action="http://www.google.com">
-		        <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+		       <!-- <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">-->
+		       <gcse:search></gcse:search>
+
 		</form>
 		
 		</div>
@@ -53,7 +68,7 @@
 		<hr />
 		<!-- Contact us area -->
 		<div class="wrappers">
-		  <div class="social"><img src ="img/Facebook-icon.png"<a href="">Facebook<i class="fa fa-twitter"></i></a></div>
+		  <div class="social"><img src ="img/Facebook-icon.png"<a href="http://google.com">Facebook<i class="fa fa-twitter"></i></a></div>
 		  <div class="social"><img src ="img/Instagram-icon.png"<a href="">Instagram<i class="fa fa-twitter"></i></a></div>
 		  <div class="social"><img src ="img/Youtube-icon.png"<a href="">Youtube<i class="fa fa-twitter"></i></a></div>
 		  <div class="social"><img src ="img/Twitter-icon.png"<a href="">Twitter<i class="fa fa-twitter"></i></a>;</div>
