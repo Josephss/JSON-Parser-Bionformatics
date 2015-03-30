@@ -5,7 +5,8 @@ and open the template in the editor.
 */
 /* 
     Created on : Nov 7, 2014, 4:23:58 PM
-    Author     : Joseph
+    Author     : Joseph Mammo
+
 */
 
 
@@ -26,7 +27,7 @@ a:hover img {
 }
 /*Border for the run images */
 .smile {
-	background: #E8E8E8;
+	background: #cfcfcf;
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	border-radius: 30px;
@@ -45,6 +46,14 @@ a:hover img {
 	border-right: thin solid #B8B8B8;
 	border-top: thin solid #B8B8B8;
 	border-bottom: thin solid #B8B8B8;
+}
+/*Class to have the fixed Div tag for running the tools from the side*/
+.scroll{
+	text-align: right;
+	float: right; 
+	width: 20px; 
+	position:fixed;
+
 }
 .ver{
 	border-right: thin solid #B8B8B8;
@@ -242,22 +251,7 @@ ul.home-nav li a.active {
 .home-container {
 	display: none;
 }
-@media (max-width: 480px) {
-	ul.home-nav li {
-		display: block;
-		margin: 0 0 5px;
-	}
-	ul.home-nav li a {
-		display: block;
-	}
-	ul.rig {
-		margin-left: 0;
-	}
-	ul.rig li {
-		width: 100% !important; /* over-ride all li styles */
-		margin: 0 0 20px;
-	}
-}
+
 
 /* Help */
 ul.help-nav {
@@ -288,22 +282,7 @@ ul.help-nav li a.active {
 .help-container {
 	display: none;
 }
-@media (max-width: 480px) {
-	ul.help-nav li {
-		display: block;
-		margin: 0 0 5px;
-	}
-	ul.help-nav li a {
-		display: block;
-	}
-	ul.rig {
-		margin-left: 0;
-	}
-	ul.rig li {
-		width: 100% !important; /* over-ride all li styles */
-		margin: 0 0 20px;
-	}
-}
+
 
 /*search box*/
 
