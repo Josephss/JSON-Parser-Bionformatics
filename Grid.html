@@ -3,7 +3,7 @@
 <head>
 <title>Bioinformatics Tools Library</title>
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <link href='index_grid.css' rel='stylesheet' type='text/css'>
@@ -21,6 +21,22 @@
     s.parentNode.insertBefore(gcse, s);
   })();
 </script>
+
+<SCRIPT TYPE="text/javascript">
+<!--
+function popup(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, windowname, 'width=500,height=300,scrollbars=no,menubar=no,resizable=no,toolbar=no,titlebar=no');
+return false;
+}
+//-->
+</SCRIPT>
 
 </head>
 
@@ -63,7 +79,7 @@
 		<!--#two-columns-->
 		<div id="two-columns" class="grid-container" style="display:block;">
 				
-						
+			<A HREF="tool_info.html" onClick="return popup(this, 'tools')">Tool popup window</A>			
 					
 		</div>
 		<!--/#two-columns-->

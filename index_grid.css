@@ -59,7 +59,8 @@ a:hover img {
 	border-right: thin solid #B8B8B8;
 }
 .righter{
-	text-align: right;
+float: left;
+	
 }
 .resize{
 }
@@ -103,6 +104,11 @@ hr {
 }
 .container {
 	width: 1200px;
+	margin: 0 auto;
+}
+.containerr {
+	width: 120px;
+	text-align: center;
 	margin: 0 auto;
 }
 ul.grid-nav {
@@ -220,6 +226,7 @@ ul.rig.columns-4 img {
 	}
 }
 
+
 /* Home */
 ul.home-nav {
 	list-style: none;
@@ -253,6 +260,7 @@ ul.home-nav li a.active {
 }
 
 
+
 /* Help */
 ul.help-nav {
 	list-style: none;
@@ -284,7 +292,7 @@ ul.help-nav li a.active {
 }
 
 
-/*search box*/
+/*OLD search box*/
 
 #tfheader{
 		
@@ -334,7 +342,7 @@ ul.help-nav li a.active {
 		clear:both;
 
 	}
-	/* end search box*/
+/* end search box*/
 
 
 
