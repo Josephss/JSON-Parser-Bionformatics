@@ -1,3 +1,6 @@
+function myFunction() {
+    $( "#idofpanel" ).panel( "open" , optionsHash );;
+}
 $(document).ready(function(){ 
 
  $(function() {
@@ -44,4 +47,7 @@ $(document).ready(function(){
 });
 
 
- }) 
+ })
+
+  
+
