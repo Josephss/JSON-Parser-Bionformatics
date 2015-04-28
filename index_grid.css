@@ -39,16 +39,20 @@ a:hover img {
 /*Border for individual images*/
 .bor{
 	background: #FAFFFA;
-	-webkit-border-radius: 30px;
-	-moz-border-radius: 30px;
-	border-radius: 30px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
 	border-left: thin solid #B8B8B8;
 	border-right: thin solid #B8B8B8;
 	border-top: thin solid #B8B8B8;
 	border-bottom: thin solid #B8B8B8;
+	box-shadow: 5px 15px 5px #888888;
 }
 /*Class to have the fixed Div tag for running the tools from the side*/
 .scroll{
+	position:absolute;
+  	left :150px;
+    top  :10px;
 	text-align: right;
 	float: right; 
 	width: 20px; 
@@ -107,7 +111,7 @@ hr {
 	margin: 0 auto;
 }
 .containerr {
-	width: 120px;
+	width: 140px;
 	text-align: center;
 	margin: 0 auto;
 }
@@ -207,8 +211,16 @@ ul.rig.columns-4 img {
 		width: auto;
 		padding: 0 10px;
 	}
+	.containerr {
+		width: 60px;
+		text-align: center;
+		margin: 0 auto;
+	}
 }
 
+/*
+Need to work on the transparent links... and resizing the imagges ...
+*/
 @media (max-width: 480px) {
 	ul.grid-nav li {
 		display: block;

@@ -21,7 +21,7 @@ $(document).ready(function(){
   		// Displays the tools in a table
   		//alert(data);
        $.each(data, function(i, f) {
-		 var tool_div_row = "<div id='two-columns parent' class='grid-container centered' style='display:block;'>" + "<ul class='col-md-3'>" + "<li style='list-style-type: none;' class = 'bor' >" + "<img id = 'pop' src='images/microscope_science_biology-512.png' class='img-responsive center-block lefter'>" +  "</img>"   + "<h4>" + "<b>" + f.id + "</b>" +"<input type='checkbox' name='tool' value='Tool'>" + f.name + "</h4>" +  "</li>" + "</ul>" + "</div>"
+		 var tool_div_row = "<div id='two-columns parent' class='grid-container centered' style='display:block;'>" + "<ul class='col-md-2'>" + "<li style='list-style-type: none;' class = 'bor' >" + "<img id = 'pop' src='images/microscope_science_biology-512.png' class='img-responsive center-block lefter'>" +  "</img>"   + "<h4>" + "<b>" + f.id + "</b>" +"<input type='checkbox' name='tool' value='Tool'>" + f.name + "</h4>" +  "</li>" + "</ul>" + "</div>"
 
 /**
 *"<form action="">" + "<input type='checkbox' name='vehicle' value='Bike'>" + "I have a bike" + "</form>" + 
