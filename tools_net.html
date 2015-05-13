@@ -24,6 +24,47 @@
   <script type="text/javascript" src="./dist/vis.js"></script>
   <link href="./vis.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript"> 
+//=--------------------------------------------------------------=
+var dataBefore = [{ '2015-04-08T17:12:05+00:00': 103.7 },{ '2015-04-08T17:13:05+00:00': 109.5 },{ '2015-04-08T17:14:05+00:00': 106 },{ '2015-04-08T17:15:05+00:00': 112.6 }];
+
+var dataAfter = [];
+
+for(var i = 0; i < dataBefore.length; i++) {
+  var item = dataBefore[i];
+  for(date in item) {
+    dataAfter.push({x: date, y: item[date]});
+  }
+}
+
+console.log(dataAfter);
+
+
+//added below for display the output
+$(".results").append(JSON.stringify(dataAfter));
+// create a network
+      var containerr = document.getElementById('results');
+      var datra = {
+        nodes: dataAfter,
+        edges: edges
+      };
+      var options = {
+        nodes: {
+          borderWidth:4,
+	      color: {
+            border: '#222222',
+            background: '#666666'
+          },
+          fontColor:'#eeeeee'
+        },
+        edges: {
+          color: 'lightgray'
+        }
+      };
+      network = new vis.Network(containerr, datra, options);
+
+
+//=--------------------------------------------------------------=
+
     var DIR = 'img/soft-scraps-icons/';
 
     var nodes = null;
@@ -116,7 +157,10 @@
 		<div id="mynetwork"></div>
 		
 		<hr />
-	
+		
+		<div class="results">
+			<h2>test</h2>
+		</div>
 	</div>
 	<!--/.container-->
 </div>
