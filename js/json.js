@@ -26,7 +26,11 @@ $(document).ready(function(){
 /**
 *"<form action="">" + "<input type='checkbox' name='vehicle' value='Bike'>" + "I have a bike" + "</form>" + 
 *
-*/
+		SEATCH ...
+*/		//if (f.name == "AGE") {
+          //  alert(f.name);
+           // return;
+       // }
 
 		 
         $(tool_div_row).appendTo("#two-columns");
@@ -46,7 +50,10 @@ $(document).ready(function(){
 
 });
 
-
+	
+	/**
+	*Search box
+	*/
  })
 
   
